@@ -28,18 +28,52 @@ JST = timezone(timedelta(hours=9))
 DEFAULT_DATA = {
     "messages": {
         "09:00": (
-            "【朝のお知らせ】\n"
-            "皆さんおはようございます。\n"
-            "本日もよろしくお願いいたします。"
+            "管理人さん失礼します\n"
+"皆さんおはようございます\n"
+"女の子応援ラウンジさんの広告になります\n"
+"⭐️チャンネルリンク🔗⭐️\n"
+"新規オープン！\n"
+"大阪市を中心に手押ししています！\n"
+"偽物粗悪品は絶対に無し！(全国発送可)\n"
+"仕入時に自信を持って仕入しています！\n\n"
+
+"telegram\n"
+"https://t.me/onnanokoouen\n\n"
+
+"シグナル\n"
+"https://signal.group/#CjQKIGoqL9kwcSI7pONT5eGxrvJMiyowhgWuEMZK0JRDNMZOEhA8nrneKLZo4b2-iGDCFapO\n\n"
         ),
         "12:00": (
-            "【昼のお知らせ】\n"
-            "最新情報は固定メッセージをご確認ください。"
+            "管理人さん失礼します\n"
+"皆さんこんにちは\n"
+"女の子応援ラウンジさんの広告になります\n"
+"⭐️チャンネルリンク🔗⭐️\n"
+"新規オープン！\n"
+"大阪市を中心に手押ししています！\n"
+"偽物粗悪品は絶対に無し！(全国発送可)\n"
+"仕入時に自信を持って仕入しています！\n\n"
+
+"telegram\n"
+"https://t.me/onnanokoouen\n\n"
+
+"シグナル\n"
+"https://signal.group/#CjQKIGoqL9kwcSI7pONT5eGxrvJMiyowhgWuEMZK0JRDNMZOEhA8nrneKLZo4b2-iGDCFapO\n\n"
         ),
         "18:00": (
-            "【夜のお知らせ】\n"
-            "本日のご案内は以上です。\n"
-            "明日もよろしくお願いいたします。"
+            "管理人さん失礼します\n"
+"皆さんこんばんは\n"
+"女の子応援ラウンジさんの広告になります\n"
+"⭐️チャンネルリンク🔗⭐️\n"
+"新規オープン！\n"
+"大阪市を中心に手押ししています！\n"
+"偽物粗悪品は絶対に無し！(全国発送可)\n"
+"仕入時に自信を持って仕入しています！\n\n"
+
+"telegram\n"
+"https://t.me/onnanokoouen\n\n"
+
+"シグナル\n"
+"https://signal.group/#CjQKIGoqL9kwcSI7pONT5eGxrvJMiyowhgWuEMZK0JRDNMZOEhA8nrneKLZo4b2-iGDCFapO\n\n"
         ),
     }
 }
