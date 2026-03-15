@@ -29,71 +29,52 @@ JST = timezone(timedelta(hours=9))
 DEFAULT_DATA = {
     "messages": {
         "09:00": (
-            "夜の秘密ラウンジへようこそ🌙\n"
-    "ここは\n"
-    "大人の女の子たちが集まる\n"
-    "秘密のナイトラウンジです。\n\n"
+            "管理人さん失礼します\n"
+"皆さんおはようございます\n"
+"女の子応援ラウンジさんの広告になります\n"
+"⭐️チャンネルリンク🔗⭐️\n"
+"新規オープン！\n"
+"大阪市を中心に手押ししています！\n"
+"偽物粗悪品は絶対に無し！(全国発送可)\n"
+"仕入時に自信を持って仕入しています！\n\n"
 
-        
-    "💋 新しい出会い\n"
-    "💋 夜の楽しい会話\n"
-    "💋 魅力的な女の子たち\n"
+"telegram\n"
+"https://t.me/onnanokoouen\n\n"
 
-    "そんな夜の時間を一緒に楽しみませんか？\n\n"
-
-    "✨ 女の子メンバー募集中\n"
-    "✨ 気軽に参加OK\n"
-
-    "👇参加はこちら\n"
-    "telegram\n"
-    "https://t.me/+CoNGESydKIwyYjI0\n"
-    "シグナル\n"
-    "https://signal.group/#CjQKIPdSY2w4wY87HxZY-qdJ0WNLWHcqjxWCRv0FEc9ViQ5VEhCn3kyfaS6cGaRTLj45q4HW\n"
-
+"シグナル\n"
+"https://signal.group/#CjQKIGoqL9kwcSI7pONT5eGxrvJMiyowhgWuEMZK0JRDNMZOEhA8nrneKLZo4b2-iGDCFapO\n\n"
         ),
         "12:00": (
-            "夜の秘密ラウンジへようこそ🌙\n"
-    "ここは\n"
-    "大人の女の子たちが集まる\n"
-    "秘密のナイトラウンジです。\n\n"
+            "管理人さん失礼します\n"
+"皆さんこんにちは\n"
+"女の子応援ラウンジさんの広告になります\n"
+"⭐️チャンネルリンク🔗⭐️\n"
+"新規オープン！\n"
+"大阪市を中心に手押ししています！\n"
+"偽物粗悪品は絶対に無し！(全国発送可)\n"
+"仕入時に自信を持って仕入しています！\n\n"
 
-        
-    "💋 新しい出会い\n"
-    "💋 夜の楽しい会話\n"
-    "💋 魅力的な女の子たち\n"
+"telegram\n"
+"https://t.me/onnanokoouen\n\n"
 
-    "そんな夜の時間を一緒に楽しみませんか？\n\n"
-
-    "✨ 女の子メンバー募集中\n"
-    "✨ 気軽に参加OK\n"
-
-    "👇参加はこちら\n"
-    "telegram\n"
-    "https://t.me/+CoNGESydKIwyYjI0\n"
-    "シグナル\n"
-    "https://signal.group/#CjQKIPdSY2w4wY87HxZY-qdJ0WNLWHcqjxWCRv0FEc9ViQ5VEhCn3kyfaS6cGaRTLj45q4HW\n"
+"シグナル\n"
+"https://signal.group/#CjQKIGoqL9kwcSI7pONT5eGxrvJMiyowhgWuEMZK0JRDNMZOEhA8nrneKLZo4b2-iGDCFapO\n\n"
         ),
         "18:00": (
-            "夜の秘密ラウンジへようこそ🌙\n"
-    "ここは\n"
-    "大人の女の子たちが集まる\n"
-    "秘密のナイトラウンジです。\n\n"
+            "管理人さん失礼します\n"
+"皆さんこんばんは\n"
+"女の子応援ラウンジさんの広告になります\n"
+"⭐️チャンネルリンク🔗⭐️\n"
+"新規オープン！\n"
+"大阪市を中心に手押ししています！\n"
+"偽物粗悪品は絶対に無し！(全国発送可)\n"
+"仕入時に自信を持って仕入しています！\n\n"
 
-        
-    "💋 新しい出会い\n"
-    "💋 夜の楽しい会話\n"
-    "💋 魅力的な女の子たち\n"
+"telegram\n"
+"https://t.me/onnanokoouen\n\n"
 
-    "そんな夜の時間を一緒に楽しみませんか？\n\n"
-
-    "✨ 女の子メンバー募集中\n"
-    "✨ 気軽に参加OK\n"
-
-    "👇参加はこちら\n"
-    "telegram\n"
-    "https://t.me/+CoNGESydKIwyYjI0\n"
-    "シグナル\n"
-    "https://signal.group/#CjQKIPdSY2w4wY87HxZY-qdJ0WNLWHcqjxWCRv0FEc9ViQ5VEhCn3kyfaS6cGaRTLj45q4HW\n"
+"シグナル\n"
+"https://signal.group/#CjQKIGoqL9kwcSI7pONT5eGxrvJMiyowhgWuEMZK0JRDNMZOEhA8nrneKLZo4b2-iGDCFapO\n\n"
         ),
     }
 }
