@@ -1,0 +1,46 @@
+name: Telegram Scheduled Posts
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub Actions の cron は UTC
+    # JST 09:00 = UTC 00:00
+    - cron: "0 0 * * *"
+    # JST 12:00 = UTC 03:00
+    - cron: "0 3 * * *"
+    # JST 18:00 = UTC 09:00
+    - cron: "0 9 * * *"
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decide slot
+        id: slot
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" = "00" ]; then
+            echo "slot=morning" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "03" ]; then
+            echo "slot=noon" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "09" ]; then
+            echo "slot=evening" >> $GITHUB_OUTPUT
+          else
+            echo "slot=unknown" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          SLOT: ${{ steps.slot.outputs.slot }}
+        run: python bot.py
