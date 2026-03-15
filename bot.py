@@ -1,7 +1,7 @@
 import json
 import logging
 import os
-from datetime import time
+from datetime import time, timezone, timedelta
 from pathlib import Path
 
 from telegram import Update
@@ -23,11 +23,24 @@ ADMIN_USER_IDS = {
     if x.strip()
 }
 
+JST = timezone(timedelta(hours=9))
+
 DEFAULT_DATA = {
     "messages": {
-        "09:00": "【朝のお知らせ】\n本日もよろしくお願いいたします。",
-        "12:00": "【昼のお知らせ】\n最新情報は固定メッセージをご確認ください。",
-        "18:00": "【夜のお知らせ】\n本日のご案内は以上です。明日もよろしくお願いいたします。",
+        "09:00": (
+            "【朝のお知らせ】\n"
+            "皆さんおはようございます。\n"
+            "本日もよろしくお願いいたします。"
+        ),
+        "12:00": (
+            "【昼のお知らせ】\n"
+            "最新情報は固定メッセージをご確認ください。"
+        ),
+        "18:00": (
+            "【夜のお知らせ】\n"
+            "本日のご案内は以上です。\n"
+            "明日もよろしくお願いいたします。"
+        ),
     }
 }
 
@@ -46,6 +59,7 @@ def load_data() -> dict:
 
     if "messages" not in data:
         data["messages"] = DEFAULT_DATA["messages"].copy()
+
     return data
 
 
@@ -71,7 +85,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = update.effective_user
     if user and is_admin(user.id):
         await update.message.reply_text(
-            "管理者として認識しました。\n"
+            "管理者として認識しました。\n\n"
+            "使えるコマンド:\n"
             "/whoami\n"
             "/post 本文\n"
             "/setmorning 本文\n"
@@ -87,9 +102,11 @@ async def whoami(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = update.effective_user
     if user is None:
         return
+
     text = f"user_id: {user.id}"
     if user.username:
         text += f"\nusername: @{user.username}"
+
     await update.message.reply_text(text)
 
 
@@ -152,6 +169,7 @@ async def schedule_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
     data = load_data()
     msgs = data["messages"]
+
     text = (
         "現在の定期投稿設定\n\n"
         f"09:00\n{msgs.get('09:00', '')}\n\n"
@@ -165,6 +183,7 @@ async def send_scheduled_post(context: ContextTypes.DEFAULT_TYPE) -> None:
     slot = context.job.data["slot"]
     data = load_data()
     text = data["messages"].get(slot)
+
     if not text:
         logger.warning("No message configured for slot %s", slot)
         return
@@ -184,19 +203,19 @@ def setup_jobs(application: Application) -> None:
 
     jq.run_daily(
         send_scheduled_post,
-        time=time(hour=9, minute=0),
+        time=time(hour=9, minute=0, tzinfo=JST),
         data={"slot": "09:00"},
         name="morning_post",
     )
     jq.run_daily(
         send_scheduled_post,
-        time=time(hour=12, minute=0),
+        time=time(hour=12, minute=0, tzinfo=JST),
         data={"slot": "12:00"},
         name="noon_post",
     )
     jq.run_daily(
         send_scheduled_post,
-        time=time(hour=18, minute=0),
+        time=time(hour=18, minute=0, tzinfo=JST),
         data={"slot": "18:00"},
         name="evening_post",
     )
